@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nocturne</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="grid"></div>
+  </div>
+
+  <header class="titlebar" data-tauri-drag-region>
+    <div class="brand" data-tauri-drag-region>
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.2a8.5 8.5 0 1 0 4.3 11.6 7 7 0 0 1-4.3-11.6z"/></svg>
+      <span data-tauri-drag-region>Nocturne</span>
+    </div>
+    <div class="tb-spacer" data-tauri-drag-region></div>
+    <button class="tb-btn tb-lock" id="tb-lock" title="Lock now (Ctrl+L)" aria-label="Lock vault" hidden>
+      <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    </button>
+    <button class="tb-btn" id="tb-min" aria-label="Minimize"><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg></button>
+    <button class="tb-btn" id="tb-max" aria-label="Maximize"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg></button>
+    <button class="tb-btn tb-close" id="tb-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></svg></button>
+  </header>
+
+  <main id="app"></main>
+  <div id="toasts" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
